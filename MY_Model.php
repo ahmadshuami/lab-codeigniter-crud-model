@@ -8,11 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 
  * @package     CodeIgniter
  * @author     	Ahmad Shuami  <shuami79@yahoo.com>
- * @copyright	Copyright (c) 2017-2019, Ahmad Shuami
+ * @copyright	Copyright (c) 2019, Ahmad Shuami
  * 
  * @license     MIT License     <https://opensource.org/licenses/MIT>
  * @link        https://www.bicarailmu.com
- * @link        https://www.facebook.com/ahmadshuami
+ * @link        https://github.com/ahmadshuami/lab-codeigniter-crud-model
  * 
  * @version     1.0.3
  */

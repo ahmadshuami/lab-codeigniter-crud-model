@@ -6,19 +6,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 
  * Handle basic database CRUD operation. This is not going to be an ORM library.
  * 
- * @package     CodeIgniter
- * @author     	Ahmad Shuami  <shuami79@yahoo.com>
+ * @package     CodeIgniter 3
+ * @author     	Ahmad Shuami  <shuamilabs@gmail.com>
  * @copyright	Copyright (c) 2019, Ahmad Shuami
  * 
  * @license     MIT License     <https://opensource.org/licenses/MIT>
- * @link        https://www.bicarailmu.com
+ * @link        https://shuamilabs.blogspot.com
  * @link        https://github.com/ahmadshuami/lab-codeigniter-crud-model
  * 
- * @version     1.0.3
+ * @version     1.0.4
  */
 abstract class MY_Model extends CI_Model {
 
     public $uuid = null;
+    public $flag = null;
 
     /**
      * __construct
@@ -83,9 +84,9 @@ abstract class MY_Model extends CI_Model {
      * ];
      * $result = $this->model_name->add_record($data, 'tblUser', $uuid = 'userId');
      * 
-     * if $uuid variable is set as NULL, it means the default value for the uuid field is set as an auto increment
-     * in database. If the variable is set with other value (other than NULL), it means the default value for the uuid
-     * field is not set as an auto increment and the variable $uuid will be set as a UUID value. 
+     * if $uuid variable is not set, it means the default value for the uuid field is set as an auto increment
+     * in database. If the variable is set with a value, it means the default value for the uuid field is not set 
+     * as an auto increment and the variable $uuid will be set as a UUID value. 
      *
      * @param  mixed $arrayQuery
      * @param  string $tableName
@@ -93,7 +94,7 @@ abstract class MY_Model extends CI_Model {
      *
      * @return boolean
      */
-    public function add_record($arrayQuery, $tableName, $uuid = NULL) 
+    public function add_record($arrayQuery, $tableName, $uuid) 
     {
         $this->uuid = $uuid;
 
